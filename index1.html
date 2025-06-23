@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>เมนูเครื่องดื่ม | ไข่หวานพาแซ่บ</title>
+
+  <!-- ฟอนต์และไอคอน -->
+  <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <style>
+    body {
+      font-family: 'Kanit', sans-serif;
+      background-color: #fffdf8;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav {
+      background-color: #ff6b6b;
+      padding: 15px;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 1.1rem;
+    }
+
+    nav a i {
+      margin-right: 6px;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    header {
+      background-color: #4db6ac;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+      font-size: 2rem;
+      letter-spacing: 1px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .slider-container {
+      position: relative;
+      max-width: 100%;
+      overflow: hidden;
+    }
+
+    .slide {
+      display: none;
+    }
+
+    .slide img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      display: block;
+    }
+
+    .active-slide {
+      display: block;
+    }
+
+    #openPopupBtn {
+      margin: 30px auto;
+      display: block;
+      padding: 10px 20px;
+      font-size: 1rem;
+      background-color: #ff6b6b;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .popup {
+      display: none;
+      position: fixed;
+      z-index: 999;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.4);
+    }
+
+    .popup-content {
+      background-color: #fff;
+      margin: 10% auto;
+      padding: 20px;
+      border-radius: 10px;
+      width: 80%;
+      max-width: 500px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      text-align: center;
+    }
+
+    .popup-content img {
+      max-width: 100%;
+      margin-top: 10px;
+      border-radius: 10px;
+    }
+
+    .close-btn {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .close-btn:hover {
+      color: black;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- เมนูนำทาง -->
+  <nav>
+    <a href="index1.html"><i class="fas fa-home"></i> หน้าแรก</a>
+    <a href="drink-menu.html"><i class="fas fa-coffee"></i> เครื่องดื่ม</a>
+    <a href="dessert-menu.html"><i class="fas fa-ice-cream"></i> ของหวาน</a>
+    <a href="savory-menu.html"><i class="fas fa-drumstick-bite"></i> ของคาว</a>
+    <a href="snack-menu.html"><i class="fas fa-cookie-bite"></i> ของกินเล่น</a>
+    <a href="alcohol-menu.html"><i class="fas fa-wine-glass-alt"></i> แอลกอฮอล์</a>
+    <a href="herbal-menu.html"><i class="fas fa-leaf"></i> สมุนไพร</a>
+  </nav>
+
+  <!-- หัวข้อ -->
+  <header>เมนูเครื่องดื่ม - ไข่หวานพาแซ่บ</header>
+
+  <!-- สไลด์โฆษณา -->
+  <div class="slider-container">
+    <div class="slide active-slide"><img src="banner1.jpg" alt="แบนเนอร์ 1"></div>
+    <div class="slide"><img src="banner2.jpg" alt="แบนเนอร์ 2"></div>
+    <div class="slide"><img src="banner3.jpg" alt="แบนเนอร์ 3"></div>
+    <div class="slide"><img src="banner4.jpg" alt="แบนเนอร์ 4"></div>
+    <div class="slide"><img src="banner5.jpg" alt="แบนเนอร์ 5"></div>
+  </div>
+
+  <!-- ปุ่มเปิด Popup -->
+  <button id="openPopupBtn">เปิด Popup</button>
+
+  <!-- Popup -->
+  <div id="popup" class="popup">
+    <div class="popup-content">
+      <span class="close-btn" id="closePopupBtn">&times;</span>
+      <h2>ยินดีต้อนรับเข้าสู่ร้านเณรไข่หวาน</h2>
+      <p>"อายุ วัณโณ สุขัง พลัง" เป็นคำให้พรจากพระ แปลว่า ขอให้มีอายุยืน วรรณะดี สุขภาพแข็งแรง และมีกำลัง</p>
+      <img src="123.jpg" alt="ภาพต้อนรับ">
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script>
+    // สไลด์โชว์
+    let slideIndex = 0;
+    const slides = document.getElementsByClassName("slide");
+
+    function showSlides() {
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].classList.remove("active-slide");
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) { slideIndex = 1 }
+      slides[slideIndex - 1].classList.add("active-slide");
+      setTimeout(showSlides, 4000);
+    }
+    showSlides();
+
+    // Popup
+    const popup = document.getElementById("popup");
+    const openBtn = document.getElementById("openPopupBtn");
+    const closeBtn = document.getElementById("closePopupBtn");
+
+    openBtn.addEventListener("click", () => {
+      popup.style.display = "block";
+    });
+
+    closeBtn.addEventListener("click", () => {
+      popup.style.display = "none";
+    });
+
+    window.addEventListener("click", (event) => {
+      if (event.target == popup) {
+        popup.style.display = "none";
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>เมนูเครื่องดื่ม | ไข่หวานพาแซ่บ</title>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Kanit', sans-serif;
+      background-color: #fffdf8;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #4db6ac;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+      font-size: 2rem;
+      letter-spacing: 1px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      text-align: center;
+      margin: 30px 0 10px;
+      color: #333;
+    }
+
+    .drink-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .drink-item {
+      background: white;
+      width: 200px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.2s ease;
+    }
+
+    .drink-item:hover {
+      transform: translateY(-5px);
+    }
+
+    .drink-image {
+      width: 100%;
+      height: 140px;
+      object-fit: cover;
+    }
+
+    .drink-info {
+      padding: 15px;
+    }
+
+    .drink-name {
+      font-size: 1.1rem;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .drink-price {
+      font-size: 1rem;
+      color: #00796b;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background-color: #e0f2f1;
+      font-size: 0.9rem;
+      color: #555;
+    }
+  </style>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>เมนูเครื่องดื่ม | ไข่หวานพาแซ่บ</title>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
+  <!-- เพิ่ม Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      font-family: 'Kanit', sans-serif;
+      background-color: #fffdf8;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav {
+      background-color: #ff6b6b;
+      padding: 15px;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 1.1rem;
+    }
+
+    nav a i {
+      margin-right: 6px;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    header {
+      background-color: #4db6ac;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+      font-size: 2rem;
+      letter-spacing: 1px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <a href="index1.html"><i class="fas fa-home"></i>หน้าแรก</a>
+    <a href="drink-menu.html"><i class="fas fa-coffee"></i>เครื่องดื่ม</a>
+    <a href="dessert-menu.html"><i class="fas fa-ice-cream"></i>ของหวาน</a>
+    <a href="savory-menu.html"><i class="fas fa-utensils"></i>ของคาว</a>
+    <a href="snack-menu.html"><i class="fas fa-cookie-bite"></i>ของกินเล่น</a>
+    <a href="alcohol-menu.html"><i class="fas fa-wine-glass-alt"></i>แอลกอฮอล์</a>
+    <a href="herbal-menu.html"><i class="fas fa-leaf"></i>สมุนไพร</a>
+  </nav>
+
+<header>เมนูเครื่องดื่ม - ไข่หวานพาแซ่บ</header>
+<div class="drink-list">
+  <!-- 1 -->
+  <div class="drink-item">
+    <img class="drink-image" src="1.jpg" alt="กาแฟเย็น">
+    <div class="drink-info">
+      <div class="drink-name">กาแฟเย็น</div>
+      <div class="drink-price">ราคา 45 บาท</div>
+    </div>
+  </div>
+
+  <!-- 2 -->
+  <div class="drink-item">
+    <img class="drink-image" src="2.jpg" alt="ชาไทยเย็น">
+    <div class="drink-info">
+      <div class="drink-name">ชาไทยเย็น</div>
+      <div class="drink-price">ราคา 40 บาท</div>
+    </div>
+  </div>
+
+  <!-- 3 -->
+  <div class="drink-item">
+    <img class="drink-image" src="3.jpg" alt="ชาเขียวมัทฉะ">
+    <div class="drink-info">
+      <div class="drink-name">ชาเขียวมัทฉะ</div>
+      <div class="drink-price">ราคา 45 บาท</div>
+    </div>
+  </div>
+
+  <!-- 4 -->
+  <div class="drink-item">
+    <img class="drink-image" src="4.jpg" alt="ชานมไข่มุก">
+    <div class="drink-info">
+      <div class="drink-name">ชานมไข่มุก</div>
+      <div class="drink-price">ราคา 55 บาท</div>
+    </div>
+  </div>
+
+  <!-- 5 -->
+  <div class="drink-item">
+    <img class="drink-image" src="5.jpg" alt="น้ำมะนาวโซดา">
+    <div class="drink-info">
+      <div class="drink-name">น้ำมะนาวโซดา</div>
+      <div class="drink-price">ราคา 35 บาท</div>
+    </div>
+  </div>
+
+  <!-- 6 -->
+  <div class="drink-item">
+    <img class="drink-image" src="6.jpg" alt="สตรอเบอร์รี่โซดา">
+    <div class="drink-info">
+      <div class="drink-name">สตรอเบอร์รี่โซดา</div>
+      <div class="drink-price">ราคา 40 บาท</div>
+    </div>
+  </div>
+
+  <!-- 7 -->
+  <div class="drink-item">
+    <img class="drink-image" src="7.jpg" alt="น้ำส้มคั้นสด">
+    <div class="drink-info">
+      <div class="drink-name">น้ำส้มคั้นสด</div>
+      <div class="drink-price">ราคา 45 บาท</div>
+    </div>
+  </div>
+
+  <!-- 8 -->
+  <div class="drink-item">
+    <img class="drink-image" src="8.jpg" alt="โกโก้เย็น">
+    <div class="drink-info">
+      <div class="drink-name">โกโก้เย็น</div>
+      <div class="drink-price">ราคา 45 บาท</div>
+    </div>
+  </div>
+
+  <!-- 9 -->
+  <div class="drink-item">
+    <img class="drink-image" src="9.jpg" alt="อเมริกาโน่เย็น">
+    <div class="drink-info">
+      <div class="drink-name">อเมริกาโน่เย็น</div>
+      <div class="drink-price">ราคา 50 บาท</div>
+    </div>
+  </div>
+
+  <!-- 10 -->
+  <div class="drink-item">
+    <img class="drink-image" src="10.jpg" alt="น้ำเก๊กฮวย">
+    <div class="drink-info">
+      <div class="drink-name">น้ำเก๊กฮวย</div>
+      <div class="drink-price">ราคา 30 บาท</div>
+    </div>
+  </div>
+
+  <!-- 11 -->
+  <div class="drink-item">
+    <img class="drink-image" src="11.jpg" alt="น้ำอัญชันมะนาว">
+    <div class="drink-info">
+      <div class="drink-name">น้ำอัญชันมะนาว</div>
+      <div class="drink-price">ราคา 35 บาท</div>
+    </div>
+  </div>
+
+  <!-- 12 -->
+  <div class="drink-item">
+    <img class="drink-image" src="12.jpg" alt="ชามะนาว">
+    <div class="drink-info">
+      <div class="drink-name">ชามะนาว</div>
+      <div class="drink-price">ราคา 35 บาท</div>
+    </div>
+  </div>
+</div>
+  </div>
+</div>
+<!-- Footer Section -->
+<footer style="background-color: #006241; color: white; padding: 40px 20px; font-family: 'Kanit', sans-serif;">
+  <div style="display: flex; flex-wrap: wrap; justify-content: space-between; max-width: 1200px; margin: auto;">
+
+    <!-- เกี่ยวกับเรา -->
+    <div style="flex: 1; min-width: 200px; margin-bottom: 20px;">
+      <img src="l1.png" alt="ไข่หวานพาแซ่บ" style="width: 60px; margin-bottom: 10px;">
+      <h3>เกี่ยวกับเรา</h3>
+      <ul style="list-style: none; padding: 0;">
+        <li>ร้านไข่หวานพาแซ่บ</li>
+        <li>อาหารอีสาน-เครื่องดื่ม-ของหวาน</li>
+        <li>ตั้งอยู่ในตัวเมืองสกลนคร</li>
+        <li>เปิดบริการทุกวัน 09:00 - 20:00 น.</li>
+      </ul>
+    </div>
+
+    <!-- ช่วยเหลือ -->
+    <div style="flex: 1; min-width: 200px; margin-bottom: 20px;">
+      <h3>ติดต่อเรา</h3>
+      <ul style="list-style: none; padding: 0;">
+        <li>นายปิติ อินทร์พจน์ (ไข่หวาน)</li>
+        <li>เบอร์: 088-808-8800</li>
+        <li>อีเมล: 67319010044@swdtcmail.com</li>
+        <li>Facebook: @kaiwanpa_saeb</li>
+      </ul>
+    </div>
+
+    <!-- ติดตามเรา -->
+    <div style="flex: 1; min-width: 200px; margin-bottom: 20px;">
+      <h3>ติดตามเรา</h3>
+      <div style="margin-bottom: 10px;">
+        <a href="#"><span style="margin-right: 10px;">📘 Facebook</span></a>
+        <a href="#"><span style="margin-right: 10px;">📸 Instagram</span></a>
+        <a href="#"><span style="margin-right: 10px;">💬 Line</span></a>
+      </div>
+      <p>สมัครรับข่าวสารและโปรโมชั่น</p>
+      <form>
+        <input type="email" placeholder="ใส่อีเมลของคุณ" style="padding: 8px; border: none; border-radius: 5px;">
+        <button style="padding: 8px 12px; border: none; background: white; color: #006241; border-radius: 5px;">เข้าร่วม</button>
+      </form>
+    </div>
+
+    <!-- QR CODE -->
+    <div style="flex: 1; min-width: 200px; margin-bottom: 20px;">
+      <h3>QR CODE ร้าน</h3>
+      <img src="987.jpg" alt="QR Code" style="width: 100px; margin-bottom: 10px;">
+      <p>สแกนเพื่อดูเมนูออนไลน์ หรือสั่งล่วงหน้า</p>
+    </div>
+
+  </div>
+</footer>
+
+<footer>© 2025 ไข่หวานพาแซ่บ | สดชื่นทุกแก้ว แซ่บทุกคำ</footer>
+
+</body>
+</html>
